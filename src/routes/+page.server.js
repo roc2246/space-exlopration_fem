@@ -1,4 +1,4 @@
-// import { destinations } from '$db/destinations';
+// import { destinations } from '$db/collections';
 
 // export const load = async () => {
 // 	const data = await destinations.find({}).toArray();
