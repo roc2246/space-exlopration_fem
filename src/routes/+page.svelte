@@ -1,9 +1,8 @@
 <script>
-    import Nav from "../components/Nav.svelte"
+	import Nav from '$lib/Nav.svelte';
 </script>
 
-
-<Nav/>
+<Nav />
 <main class="home-content">
 	<div class="home-content__heading">
 		<h3 class="home-content__heading home-content__heading--secondary">
@@ -17,6 +16,6 @@
 		this world experience! Explore
 	</p>
 </main>
-<style lang="scss">
 
+<style lang="scss">
 </style>
