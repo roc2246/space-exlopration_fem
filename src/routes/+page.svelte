@@ -1,8 +1,5 @@
 <script>
-	import { setBackground } from "../stores/store";
 
-
-	setBackground("./assets/destination/image-titan.png")
 </script>
 <main class="home-content">
 	<div class="home-content__heading">
