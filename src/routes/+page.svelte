@@ -1,4 +1,8 @@
-
+<script>
+	
+    const body = document.querySelector("body")
+    console.log(body)
+</script>
 <main class="home-content">
 	<div class="home-content__heading">
 		<h3 class="home-content__heading home-content__heading--secondary">
