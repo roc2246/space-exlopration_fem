@@ -1,8 +1,9 @@
 <script>
+    import Nav from "../components/Nav.svelte"
 </script>
 
-<nav class="nav">00 Home 01 Destination 02 Crew 03 Technology</nav>
 
+<Nav/>
 <main class="home-content">
 	<div class="home-content__heading">
 		<h3 class="home-content__heading home-content__heading--secondary">
