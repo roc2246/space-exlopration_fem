@@ -5,9 +5,9 @@
 
 <main class="text-content">
 	<div class="text-content__heading">
-		<h6 class="text-content__heading text-content__heading--secondary">
+		<h3 class="text-content__heading text-content__heading--secondary">
 			So, you want to travel to
-		</h6>
+		</h3>
 		<h1 class="text-content__heading text-content__heading--primary">Space</h1>
 	</div>
 	<p class="text-content__main-text">
@@ -16,3 +16,6 @@
 		this world experience! Explore
 	</p>
 </main>
+<style lang="scss">
+
+</style>
