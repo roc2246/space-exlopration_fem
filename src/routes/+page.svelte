@@ -1,8 +1,4 @@
-<script>
-	import Nav from '$lib/Nav.svelte';
-</script>
 
-<Nav />
 <main class="home-content">
 	<div class="home-content__heading">
 		<h3 class="home-content__heading home-content__heading--secondary">
