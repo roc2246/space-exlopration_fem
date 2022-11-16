@@ -1,10 +1,10 @@
 <script>
-	let toggleSrc = 'icon-hamburger';
+	let toggleSrc = 'hamburger';
 </script>
 
 <nav class="nav">
 	<div class="nav__mobile-toggle">
-		<img src="./assets/shared/{toggleSrc}.svg" alt="mobile-toggle" />
+		<img src="./assets/shared/icon-{toggleSrc}.svg" alt="mobile-toggle" />
 	</div>
 	<a data-sveltekit-prefetch href="/" class="nav__link">
 		<span class="nav__link--no">00&nbsp;</span>
