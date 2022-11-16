@@ -1,48 +1,46 @@
 <script>
-    export let data
-    const destination = data.destination
+	import Nav from '$lib/Nav.svelte';
 
-    import { setBackground } from '../../js/global';
-
-// setBackground('../../assets/destination/image-mars.png');
-
-let no = 0;
-
+	export let data;
+	const destination = data.destination;
+	let no = 0;
 </script>
 
-<header class="heading">
-    <h2 class="heading__title">
-        <span class="heading__title--no">01</span>
-        <span class="heading__title--name">PICK YOUR DESTINATION</span>
-    </h2>
-    </header>
-    <main class="destination">
-      
-        <section class="destination__image">
-            <img  src={destination[no].images.png} alt={destination[no].name} />
-        </section>
+<section id="destination-container">
+	<Nav />
+	<header class="heading">
+		<h2 class="heading__title">
+			<span class="heading__title--no">01</span>
+			<span class="heading__title--name">PICK YOUR DESTINATION</span>
+		</h2>
+	</header>
+	<main class="destination">
+		<section class="destination__image">
+			<img src={destination[no].images.png} alt={destination[no].name} />
+		</section>
 
-        <section class="destination__select">
-            {#each destination as place, i}
-                <h1 on:keydown on:click={() => (no = i)} class="destination__select--no">
-                    {place.name}
-                </h1>
-            {/each}
-        </section>
-        <section class="destination__heading">
-            <h1 class="destination__heading--primary">{destination[no].name.toUpperCase()}</h1>
-        </section>
-        <p class="destination__description">
-            {destination[no].description}
-        </p>
-      <section class="destination__stats">
-        <div class="destination__stats--distance">
-            <h6>AVG. DISTANCE</h6>
-            <h2>{destination[no].distance}</h2>
-        </div>
-        <div class="destination__stats--time">
-            <h6>EST. TRAVEL TIME</h6>
-            <h2>{destination[no].travel}</h2>
-        </div>
-      </section>
-    </main>
+		<section class="destination__select">
+			{#each destination as place, i}
+				<h1 on:keydown on:click={() => (no = i)} class="destination__select--no">
+					{place.name}
+				</h1>
+			{/each}
+		</section>
+		<section class="destination__heading">
+			<h1 class="destination__heading--primary">{destination[no].name.toUpperCase()}</h1>
+		</section>
+		<p class="destination__description">
+			{destination[no].description}
+		</p>
+		<section class="destination__stats">
+			<div class="destination__stats--distance">
+				<h6>AVG. DISTANCE</h6>
+				<h2>{destination[no].distance}</h2>
+			</div>
+			<div class="destination__stats--time">
+				<h6>EST. TRAVEL TIME</h6>
+				<h2>{destination[no].travel}</h2>
+			</div>
+		</section>
+	</main>
+</section>
