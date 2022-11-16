@@ -6,7 +6,7 @@
 	let no = 0;
 </script>
 
-<section id="crew-container">
+<section class="page-container"  id="crew-container">
 	<Nav />
 	<header class="heading">
 		<h2 class="heading__title">
@@ -34,3 +34,9 @@
 		</section>
 	</main>
 </section>
+
+<style>
+	.crew__image > img{
+		max-width: 100%;
+	}
+</style>

@@ -6,7 +6,7 @@
 	let no = 0;
 </script>
 
-<section id="technology-container">
+<section class="page-container"  id="technology-container">
 	<Nav />
 	<header class="heading">
 		<h2 class="heading__title">
@@ -43,3 +43,9 @@
 		</section>
 	</main>
 </section>
+
+<style>
+	.technology__image--desktop, .technology__image--mobile{
+		max-width: 100%;
+	}
+</style>

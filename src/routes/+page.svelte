@@ -2,7 +2,7 @@
 	import Nav from '$lib/Nav.svelte';
 </script>
 
-<section id="home-container">
+<section class="page-container" id="home-container">
 	<Nav />
 	<main class="home-content">
 		<div class="home-content__heading">
@@ -18,4 +18,5 @@
 </section>
 
 <style lang="scss">
+
 </style>
