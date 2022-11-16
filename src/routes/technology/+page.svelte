@@ -44,8 +44,15 @@
 	</main>
 </section>
 
-<style>
+<style lang="scss">
 	.technology__image--desktop, .technology__image--mobile{
 		max-width: 100%;
+	}
+	.technology{
+		&__image{
+			&--mobile{
+				display: none;
+			}
+		}
 	}
 </style>
