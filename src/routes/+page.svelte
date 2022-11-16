@@ -1,9 +1,9 @@
 <script>
-	import Nav from '$lib/Nav.svelte';
+	import TopRow from '../lib/TopRow.svelte';
 </script>
 
-<section class="page-container" id="home-container">
-	<Nav />
+<section class="page-container"  id="home-container">
+	<TopRow />
 	<main class="home-content">
 		<div class="home-content__heading">
 			<h3 class="home-content__heading--secondary">So, you want to travel to</h3>

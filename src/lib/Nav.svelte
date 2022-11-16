@@ -19,9 +19,14 @@
 
 <style lang="scss">
 	.nav {
-		width: 100%;
-		&__link {
-			margin-left: auto;
+
+		display: flex;
+		flex-direction: row;
+
+		&__link{
+			text-decoration: none;
+			margin-left: .25rem;
+		margin-right: .25rem;
 		}
 	}
 </style>

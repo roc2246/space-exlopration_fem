@@ -1,5 +1,5 @@
 <script>
-	import Nav from '$lib/Nav.svelte';
+	import TopRow from '../../lib/TopRow.svelte';
 
 	export let data;
 	const crew = data.crew;
@@ -7,7 +7,7 @@
 </script>
 
 <section class="page-container"  id="crew-container">
-	<Nav />
+	<TopRow />
 	<header class="heading">
 		<h2 class="heading__title">
 			<span class="heading__title--no">02</span>
