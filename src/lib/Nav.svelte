@@ -18,14 +18,13 @@
 </nav>
 
 <style lang="scss">
+    @import "../styles/global.scss";
 	.nav {
 		display: flex;
 		flex-direction: row;
 		border: solid;
 		&__link {
-			display: flex;
-			justify-content: center;
-			align-items: center;
+			@include centerChild();
 
 			text-decoration: none;
 			margin-left: 0.25rem;
