@@ -24,8 +24,8 @@
 	.home-content {
 		display: grid;
 		grid-template-columns: max(15rem, 25%) max(2rem, 50%) 1fr;
-		margin-left: 2rem;
-		margin-right: 2rem;
+		margin-left: 4rem;
+		margin-right: 4rem;
 		margin-top: 10rem;
 		&__secondary-heading {
 			grid-row: 1;
@@ -37,6 +37,7 @@
 		&__main-text {
 			grid-row-start: 3;
 			grid-row-end: 4;
+			width: 24rem;
 		}
 		&__explore {
 			grid-column-start: 3;
