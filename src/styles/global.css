@@ -12,6 +12,11 @@ body {
 
 }
 
+.main{
+	margin-left: 4rem;
+	margin-right: 4rem;
+}
+
 h1, h2 {
 	word-break: break-word;
 }

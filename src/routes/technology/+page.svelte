@@ -8,7 +8,7 @@
 
 <section class="page-container"  id="technology-container">
 	<TopRow />
-	<main class="technology">
+	<main class="technology main">
 		<h2 class="technology__title">
 			<span class="technology__title--no">03</span>
 			<span class="technology__title--name">SPACE LAUNCH 101</span>

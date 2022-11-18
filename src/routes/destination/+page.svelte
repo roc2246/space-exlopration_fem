@@ -9,7 +9,7 @@
 <section class="page-container"  id="destination-container">
 	<TopRow />
 
-	<main class="destination">
+	<main class="destination main">
 			<h2 class="destination__title">
 				<span class="destination__title--no">01</span>
 				<span class="destination__title--name">PICK YOUR DESTINATION</span>

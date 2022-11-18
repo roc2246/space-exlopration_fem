@@ -4,7 +4,7 @@
 
 <section class="page-container" id="home-container">
 	<TopRow />
-	<main class="home-content">
+	<main class="home-content main">
 		<h3 class="home-content__secondary-heading">So, you want to travel to</h3>
 		<h1 class="home-content__primary-heading">Space</h1>
 		<p class="home-content__main-text">
@@ -24,8 +24,7 @@
 	.home-content {
 		display: grid;
 		grid-template-columns: max(15rem, 25%) max(2rem, 50%) 1fr;
-		margin-left: 4rem;
-		margin-right: 4rem;
+	
 		margin-top: 10rem;
 		&__secondary-heading {
 			grid-row: 1;

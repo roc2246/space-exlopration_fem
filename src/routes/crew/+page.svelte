@@ -9,7 +9,7 @@
 <section class="page-container"  id="crew-container">
 	<TopRow />
 
-	<main class="crew">
+	<main class="crew main">
 			<h2 class="crew__title">
 				<span class="crew__title--no">02</span>
 				<span class="crew__title--name">MEET YOUR CREW</span>
