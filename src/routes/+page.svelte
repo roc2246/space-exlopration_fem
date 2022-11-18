@@ -21,4 +21,26 @@
 </section>
 
 <style lang="scss">
+	@import '../styles/global.scss';
+
+	.home-content {
+		display: grid;
+		grid-template-columns: max(15rem, 25%) max(2rem, 25%) auto;
+		margin-left: 2rem;
+		margin-right: 2rem;
+
+		&__main-text {
+			grid-row: 2;
+		}
+		&__explore {
+			grid-column: 3;
+			grid-row: 2;
+
+			width: 20rem;
+			height: auto;
+			border: solid;
+
+			@include centerChild();
+		}
+	}
 </style>
