@@ -8,13 +8,12 @@
 
 <section class="page-container"  id="crew-container">
 	<TopRow />
-	<header class="heading">
-		<h2 class="heading__title">
-			<span class="heading__title--no">02</span>
-			<span class="heading__title--name">MEET YOUR CREW</span>
-		</h2>
-	</header>
+
 	<main class="crew">
+			<h2 class="crew__title">
+				<span class="crew__title--no">02</span>
+				<span class="crew__title--name">MEET YOUR CREW</span>
+			</h2>
 		<section class="crew__heading">
 			<h3 class="crew__heading--secondary">{crew[no].role.toUpperCase()}</h3>
 			<h1 class="crew__heading--primary">{crew[no].name.toUpperCase()}</h1>

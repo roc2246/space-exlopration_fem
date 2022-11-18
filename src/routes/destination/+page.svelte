@@ -8,13 +8,12 @@
 
 <section class="page-container"  id="destination-container">
 	<TopRow />
-	<header class="heading">
-		<h2 class="heading__title">
-			<span class="heading__title--no">01</span>
-			<span class="heading__title--name">PICK YOUR DESTINATION</span>
-		</h2>
-	</header>
+
 	<main class="destination">
+			<h2 class="destination__title">
+				<span class="destination__title--no">01</span>
+				<span class="destination__title--name">PICK YOUR DESTINATION</span>
+			</h2>
 		<section class="destination__image">
 			<img src={destination[no].images.png} alt={destination[no].name} />
 		</section>

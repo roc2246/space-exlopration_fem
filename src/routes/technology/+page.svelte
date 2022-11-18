@@ -8,14 +8,11 @@
 
 <section class="page-container"  id="technology-container">
 	<TopRow />
-
-	<header class="heading">
-		<h2 class="heading__title">
-			<span class="heading__title--no">03</span>
-			<span class="heading__title--name">SPACE LAUNCH 101</span>
-		</h2>
-	</header>
 	<main class="technology">
+		<h2 class="technology__title">
+			<span class="technology__title--no">03</span>
+			<span class="technology__title--name">SPACE LAUNCH 101</span>
+		</h2>
 		<section class="technology__select">
 			{#each technology as item, i}
 				<h1 on:keydown on:click={() => (no = i)} class="technology__select--no">
