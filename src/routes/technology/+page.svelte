@@ -53,7 +53,7 @@
 		height: auto;
 	}
 
-	#technology-container{
+	#technology-container {
 		padding-right: 0;
 	}
 
@@ -85,14 +85,12 @@
 				@include centerChild();
 			}
 		}
-		&__heading, &__description {
+		&__heading,
+		&__description {
 			margin-left: 2rem;
 		}
 		&__heading {
 			grid-row: 3;
-			// &--primary{
-			// 	margin-bottom: 0;
-			// }
 		}
 		&__description {
 			grid-column: 2;
@@ -112,38 +110,36 @@
 		}
 	}
 	@media (max-width: $tablet) {
-
-		#technology-container{
-		padding-right: 2rem;
-	}
+		#technology-container {
+			padding-right: 2rem;
+		}
 
 		.technology {
-			grid-template-columns: 4rem auto ;
+			grid-template-columns: 4rem auto;
 			margin-left: 0;
-	margin-right: 0;
-	&__description {
-		margin-right: 0;
-	}
-			&__image {
-		grid-row: 6;
-		grid-column-start: 1;
-		grid-column-end: 3;
-				margin-left: 0rem;
 			margin-right: 0;
-			margin-top: 2rem;
-			&--desktop {
-				display: none;
+			&__description {
+				margin-right: 0;
 			}
-			&--mobile {
-				display: block;
+			&__image {
+				grid-row: 6;
+				grid-column-start: 1;
+				grid-column-end: 3;
+				margin-left: 0rem;
+				margin-right: 0;
+				margin-top: 2rem;
+				&--desktop {
+					display: none;
+				}
+				&--mobile {
+					display: block;
+				}
+			}
+		}
+		@media (max-width: $mobile) {
+			.technology {
+				margin-top: 0.25rem;
 			}
 		}
 	}
-	@media (max-width: $mobile) {
-		.technology {
-			margin-top: .25rem;
-		
-		}
-	}
-}
 </style>
