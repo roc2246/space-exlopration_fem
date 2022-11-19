@@ -6,16 +6,20 @@
 	let no = 0;
 </script>
 
-<section class="page-container"  id="destination-container">
+<section class="page-container" id="destination-container">
 	<TopRow />
 
 	<main class="destination main">
-			<h2 class="destination__title">
-				<span class="destination__title--no">01</span>
-				<span class="destination__title--name">PICK YOUR DESTINATION</span>
-			</h2>
+		<h2 class="destination__title">
+			<span class="destination__title--no">01</span>
+			<span class="destination__title--name">PICK YOUR DESTINATION</span>
+		</h2>
 		<section class="destination__image">
-			<img src={destination[no].images.png} alt={destination[no].name} />
+			<img
+				class="destination__image--image"
+				src={destination[no].images.png}
+				alt={destination[no].name}
+			/>
 		</section>
 
 		<section class="destination__select">
@@ -44,8 +48,13 @@
 	</main>
 </section>
 
-<style>
-	.destination__image > img{
-		max-width: 100%;
+<style lang="scss">
+	@import '../../styles/global.scss';
+	.destination {
+		&__image {
+			&--image {
+				max-width: 100%;
+			}
+		}
 	}
 </style>
