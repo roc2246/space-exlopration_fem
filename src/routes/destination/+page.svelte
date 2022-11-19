@@ -51,6 +51,8 @@
 <style lang="scss">
 	@import '../../styles/global.scss';
 	.destination {
+		display: grid;
+		grid-template-columns: repeat(2, auto);
 		&__image {
 			&--image {
 				max-width: 100%;
