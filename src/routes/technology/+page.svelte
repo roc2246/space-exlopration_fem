@@ -98,6 +98,7 @@
 			grid-column: 2;
 			grid-row: 4;
 			max-width: 22rem;
+			margin-right: 2rem;
 		}
 		&__image {
 			grid-column: 3;
@@ -110,4 +111,39 @@
 			}
 		}
 	}
+	@media (max-width: $tablet) {
+
+		#technology-container{
+		padding-right: 2rem;
+	}
+
+		.technology {
+			grid-template-columns: 4rem auto ;
+			margin-left: 0;
+	margin-right: 0;
+	&__description {
+		margin-right: 0;
+	}
+			&__image {
+		grid-row: 6;
+		grid-column-start: 1;
+		grid-column-end: 3;
+				margin-left: 0rem;
+			margin-right: 0;
+			margin-top: 2rem;
+			&--desktop {
+				display: none;
+			}
+			&--mobile {
+				display: block;
+			}
+		}
+	}
+	@media (max-width: $mobile) {
+		.technology {
+			margin-top: .25rem;
+		
+		}
+	}
+}
 </style>
