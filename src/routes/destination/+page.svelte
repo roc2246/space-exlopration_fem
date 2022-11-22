@@ -32,9 +32,12 @@
 		<section class="destination__heading">
 			<h1 class="destination__heading--primary">{destination[no].name.toUpperCase()}</h1>
 		</section>
-		<p class="destination__description">
-			{destination[no].description}
-		</p>
+		<section class="destination__description">
+			<p class="destination__description--text">
+				{destination[no].description}
+			</p>
+		</section>
+
 		<section class="destination__stats">
 			<div class="destination__stats--distance">
 				<h6>AVG. DISTANCE</h6>
@@ -53,10 +56,81 @@
 	.destination {
 		display: grid;
 		grid-template-columns: repeat(2, auto);
+		&__title {
+			grid-row: 1;
+			grid-column-start: 1;
+			grid-column-end: 2;
+		}
 		&__image {
+			grid-row-start: 2;
+			grid-row-end: 6;
+			grid-column: 1;
+
+			padding: 2rem;
 			&--image {
 				max-width: 100%;
 			}
 		}
+
+		&__select {
+			grid-column: 2;
+			grid-row: 2;
+
+			display: flex;
+			flex-direction: row;
+		}
+		&__heading {
+			grid-column: 2;
+			grid-row: 3;
+		}
+		&__description {
+			grid-column: 2;
+			grid-row: 4;
+
+			max-width: 23rem;
+		}
+		&__stats {
+			grid-column: 2;
+			grid-row: 5;
+
+			display: flex;
+			flex-direction: row;
+		}
 	}
+
+	@media (max-width: $tablet) {
+		.destination {
+			grid-template-columns: auto;
+			margin-left: 0;
+			margin-right: 0;
+			&__title {
+				@include centerChild();
+			}
+			&__select {
+				grid-column: 1;
+				justify-content: center;
+			}
+			&__heading {
+				grid-column: 1;
+				text-align: center;
+			}
+			&__description {
+				grid-column: 1;
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 30rem;
+			}
+			&__stats {
+				grid-column: 1;
+				justify-content: center;
+			}
+			&__image {
+				grid-row-start: 6;
+				@include centerChild();
+			}
+		}
+	}
+	
+	@media (max-width: $mobile) {}
+
 </style>
