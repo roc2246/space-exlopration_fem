@@ -138,7 +138,43 @@
 		}
 		@media (max-width: $mobile) {
 			.technology {
-				margin-top: 0.25rem;
+				grid-template-columns: auto;
+				margin-left: 0;
+				margin-right: 0;
+				&__title {
+					grid-row: 1;
+					text-align: center;
+					grid-column: 1;
+				}
+
+				&__image {
+					grid-row: 2;
+					grid-column: 1;
+				}
+				&__select {
+					grid-row: 3;
+					grid-column: 1;
+
+					flex-direction: row;
+					justify-content: center;
+
+					margin-top: 1rem;
+					margin-bottom: 1rem;
+				}
+
+				&__heading {
+					grid-row: 4;
+					grid-column: 1;
+
+					text-align: center;
+				}
+				&__description {
+					grid-row: 5;
+					grid-column: 1;
+					max-width: 30rem;
+
+					margin-right: 0;
+				}
 			}
 		}
 	}

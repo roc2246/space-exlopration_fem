@@ -131,6 +131,40 @@
 		}
 	}
 	
-	@media (max-width: $mobile) {}
+	@media (max-width: $mobile) {
+		.destination {
+			grid-template-columns: auto;
+			margin-left: 0;
+			margin-right: 0;
+			&__title {
+				grid-row: 1;
+			}
+			&__select {
+				grid-row: 2;
+
+				justify-content: center;
+			}
+			&__image {
+				grid-row: 3;
+			}
+			
+		
+			&__heading {
+				grid-row: 4;
+
+				text-align: center;
+			}
+			&__description {
+				grid-row: 5;
+
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 30rem;
+			}
+			&__stats{
+				grid-row: 6;
+			}
+		}
+	}
 
 </style>
