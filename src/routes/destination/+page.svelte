@@ -53,6 +53,9 @@
 
 <style lang="scss">
 	@import '../../styles/global.scss';
+
+	@include backgroundImage("destination", "desktop");
+
 	.destination {
 		display: grid;
 		grid-template-columns: repeat(2, auto);
@@ -99,6 +102,8 @@
 	}
 
 	@media (max-width: $tablet) {
+	@include backgroundImage("destination", "tablet");
+
 		.destination {
 			grid-template-columns: auto;
 			margin-left: 0;
@@ -132,6 +137,8 @@
 	}
 	
 	@media (max-width: $mobile) {
+		@include backgroundImage("destination", "mobile");
+
 		.destination {
 			grid-template-columns: auto;
 			margin-left: 0;

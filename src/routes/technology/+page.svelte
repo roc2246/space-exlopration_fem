@@ -47,15 +47,15 @@
 <style lang="scss">
 	@import '../../styles/global.scss';
 
+	@include backgroundImage('technology', 'desktop');
+
 	.technology__image--desktop,
 	.technology__image--mobile {
 		max-width: 100%;
 		height: auto;
 	}
 
-	#technology-container {
-		padding-right: 0;
-	}
+
 
 	.technology {
 		display: grid;
@@ -110,6 +110,8 @@
 		}
 	}
 	@media (max-width: $tablet) {
+		@include backgroundImage('technology', 'tablet');
+
 		#technology-container {
 			padding-right: 2rem;
 		}
@@ -137,6 +139,8 @@
 			}
 		}
 		@media (max-width: $mobile) {
+			@include backgroundImage('technology', 'mobile');
+
 			.technology {
 				grid-template-columns: auto;
 				margin-left: 0;

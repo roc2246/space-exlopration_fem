@@ -36,6 +36,8 @@
 
 <style lang="scss">
 	@import '../../styles/global.scss';
+	@include backgroundImage("crew", "desktop");
+
 	.crew {
 		display: grid;
 		grid-template-columns: repeat(2, auto);
@@ -74,6 +76,8 @@
 	}
 
 	@media (max-width: $tablet) {
+	@include backgroundImage("crew", "tablet");
+
 		.crew {
 			grid-template-columns: auto;
 			margin-left: 0;
@@ -105,6 +109,8 @@
 	}
 
 	@media (max-width: $mobile) {
+	@include backgroundImage("crew", "mobile");
+
 		.crew {
 			&__image {
 				grid-row: 1;
