@@ -20,10 +20,10 @@
 
 <style lang="scss">
 	@import '../styles/global.scss';
-	#home-container {
-			background-image: url('../assets/home/background-home-desktop.jpg');
-		}
-
+	// #home-container {
+	// 		background-image: url('../assets/home/background-home-desktop.jpg');
+	// 	}
+@include backgroundImage("home", "desktop");
 	.home-content {
 		display: grid;
 		grid-template-columns: max(15rem, 25%) max(2rem, 50%) 1fr;
