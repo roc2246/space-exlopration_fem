@@ -20,10 +20,9 @@
 
 <style lang="scss">
 	@import '../styles/global.scss';
-	// #home-container {
-	// 		background-image: url('../assets/home/background-home-desktop.jpg');
-	// 	}
-@include backgroundImage("home", "desktop");
+
+	@include backgroundImage('home', 'desktop');
+
 	.home-content {
 		display: grid;
 		grid-template-columns: max(15rem, 25%) max(2rem, 50%) 1fr;
@@ -60,6 +59,7 @@
 	}
 
 	@media (max-width: $tablet) {
+	@include backgroundImage('home', 'tablet');
 		.home-content {
 			display: flex;
 			flex-direction: column;
@@ -72,6 +72,7 @@
 		}
 	}
 	@media (max-width: $mobile) {
+	@include backgroundImage('home', 'mobile');
 		.home-content {
 			margin-top: 0.25rem;
 

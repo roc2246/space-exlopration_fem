@@ -11,5 +11,7 @@ $mobile: 480px;
 	$selector: '#' + $page + '-container';
 	#{$selector} {
 		background-image: url('../assets/' + $page + '/background-' + $page + '-' + $screen + '.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 }
