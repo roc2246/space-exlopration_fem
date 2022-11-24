@@ -20,11 +20,14 @@
 
 <style lang="scss">
 	@import '../styles/global.scss';
+	#home-container {
+			background-image: url('../assets/home/background-home-desktop.jpg');
+		}
 
 	.home-content {
 		display: grid;
 		grid-template-columns: max(15rem, 25%) max(2rem, 50%) 1fr;
-	
+
 		margin-top: 10rem;
 		&__secondary-heading {
 			grid-row: 1;
@@ -63,16 +66,16 @@
 			align-items: center;
 			margin-top: 5rem;
 
-			&__main-text{
-				width:25rem;
+			&__main-text {
+				width: 25rem;
 			}
 		}
 	}
 	@media (max-width: $mobile) {
 		.home-content {
-			margin-top: .25rem;
-		
-			&__main-text{
+			margin-top: 0.25rem;
+
+			&__main-text {
 				width: 20rem;
 			}
 		}
