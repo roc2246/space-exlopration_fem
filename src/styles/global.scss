@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+
 $tablet: 768px;
 $mobile: 480px;
+
+$heading-font: 'Cinzel', serif;
 
 @mixin centerChild() {
 	display: flex;
