@@ -77,8 +77,12 @@
 			align-items: center;
 			margin-top: 5rem;
 
+			&__primary-heading{
+				font-size: 6rem;
+			}
+
 			&__main-text {
-				width: 25rem;
+				max-width: 25rem;
 			}
 		}
 	}
@@ -93,7 +97,7 @@
 			}
 
 			&__main-text {
-				width: 20rem;
+				max-width: 20rem;
 			}
 		}
 	}

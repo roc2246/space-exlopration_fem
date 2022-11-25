@@ -54,7 +54,7 @@
 <style lang="scss">
 	@import '../../styles/global.scss';
 
-	@include backgroundImage("destination", "desktop");
+	@include backgroundImage('destination', 'desktop');
 
 	.destination {
 		display: grid;
@@ -85,18 +85,18 @@
 
 			justify-content: space-between;
 
-			& > *{
+			& > * {
 				cursor: pointer;
 			}
 		}
 		&__heading {
 			grid-column: 2;
 			grid-row: 3;
-			&--primary{
-			font-size: 6rem;
+			&--primary {
+				font-size: 6rem;
 
-			margin-top: 0;
-			margin-bottom: 0;
+				margin-top: 0;
+				margin-bottom: 0;
 			}
 		}
 		&__description {
@@ -118,8 +118,10 @@
 	}
 
 	@media (max-width: $tablet) {
-	@include backgroundImage("destination", "tablet");
-
+		@include backgroundImage('destination', 'tablet');
+		#destination-container {
+			height: 100%;
+		}
 		.destination {
 			grid-template-columns: auto;
 			margin-left: 0;
@@ -132,7 +134,7 @@
 			&__select {
 				grid-column: 1;
 				justify-content: space-evenly;
-			max-width: 100%;
+				max-width: 100%;
 			}
 			&__heading {
 				grid-column: 1;
@@ -147,14 +149,13 @@
 			&__stats {
 				grid-column: 1;
 				justify-content: space-evenly;
-			max-width: 100%;
+				max-width: 100%;
 			}
-		
 		}
 	}
-	
+
 	@media (max-width: $mobile) {
-		@include backgroundImage("destination", "mobile");
+		@include backgroundImage('destination', 'mobile');
 
 		.destination {
 			grid-template-columns: auto;
@@ -163,11 +164,8 @@
 			&__title {
 				grid-row: 1;
 			}
-		
-			
-		
-			&__heading {
 
+			&__heading {
 				text-align: center;
 			}
 			&__description {
@@ -177,10 +175,9 @@
 				margin-right: auto;
 				max-width: 30rem;
 			}
-			&__stats{
+			&__stats {
 				grid-row: 6;
 			}
 		}
 	}
-
 </style>
