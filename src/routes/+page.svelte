@@ -24,7 +24,7 @@
 
 	.home-content {
 		display: grid;
-		grid-template-columns: auto max(2rem, 50%) 1fr;
+		grid-template-columns: auto 1fr 1fr;
 
 		margin-top: 10rem;
 		&__secondary-heading {
@@ -36,7 +36,7 @@
 			grid-row-start: 2;
 			grid-row-end: 3;
 
-			font-size: 8rem;
+			font-size: $desktop-heading-size;
 
 			margin-top: 0;
 			margin-bottom: 0;
@@ -78,7 +78,7 @@
 			margin-top: 5rem;
 
 			&__primary-heading{
-				font-size: 6rem;
+				font-size: $mobile-heading-size;
 			}
 
 			&__main-text {

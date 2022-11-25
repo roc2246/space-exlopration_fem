@@ -6,6 +6,9 @@ $mobile: 480px;
 
 $heading-font: 'Cinzel', serif;
 
+$desktop-heading-size: 8rem;
+$mobile-heading-size: 6rem;
+
 @mixin centerChild() {
 	display: flex;
 	justify-content: center;
