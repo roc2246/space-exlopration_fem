@@ -49,6 +49,9 @@
 		&__heading {
 			grid-column: 1;
 			grid-row: 3;
+			&--primary{
+			font-size: 2rem;
+			}
 		}
 		&__description {
 			grid-column: 1;
