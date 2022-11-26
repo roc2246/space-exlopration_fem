@@ -50,7 +50,7 @@
 			grid-column: 1;
 			grid-row: 3;
 			&--primary{
-			font-size: 2rem;
+			font-size: 4rem;
 			}
 		}
 		&__description {

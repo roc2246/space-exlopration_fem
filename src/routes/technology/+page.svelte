@@ -55,8 +55,6 @@
 		height: auto;
 	}
 
-
-
 	.technology {
 		display: grid;
 		grid-template-columns: 4rem auto auto;
@@ -77,6 +75,7 @@
 			gap: 2rem;
 
 			&--container {
+				cursor: pointer;
 				border: solid;
 				border-radius: 50%;
 				width: 3.5rem;
@@ -91,6 +90,12 @@
 		}
 		&__heading {
 			grid-row: 3;
+
+			&--primary {
+				margin-top: 0;
+				margin-bottom: 0;
+				font-size: 4rem;
+			}
 		}
 		&__description {
 			grid-column: 2;
@@ -114,21 +119,23 @@
 
 		#technology-container {
 			padding-right: 2rem;
+			width: auto;
+			height: 100%;
 		}
 
 		.technology {
-			grid-template-columns: 4rem auto;
-			margin-left: 0;
+			grid-template-columns: auto;
+			margin-left: -2rem;
 			margin-right: 0;
-			&__description {
-				margin-right: 0;
+			width: 100vw;
+			&__title {
+				margin-left: 2rem;
 			}
 			&__image {
-				grid-row: 6;
-				grid-column-start: 1;
-				grid-column-end: 3;
+				grid-row: 2;
+				grid-column: 1;
 				margin-left: 0rem;
-				margin-right: 0;
+				margin-right: 0rem;
 				margin-top: 2rem;
 				&--desktop {
 					display: none;
@@ -137,18 +144,48 @@
 					display: block;
 				}
 			}
+			&__select {
+				grid-row: 3;
+				flex-direction: row;
+				justify-content: space-evenly;
+				margin-top: 1rem;
+				margin-bottom: 1rem;
+			}
+			&__heading {
+				grid-row: 4;
+				margin-left: 1rem;
+				margin-right: 1rem;
+				& > * {
+					text-align: center;
+				}
+			}
+			&__description {
+				grid-row: 5;
+				grid-column: 1;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+			}
 		}
 		@media (max-width: $mobile) {
 			@include backgroundImage('technology', 'mobile');
 
+			#technology-container {
+			padding-right: 2rem;
+			width: auto;
+			height: 100vh;
+		}
+
+
 			.technology {
 				grid-template-columns: auto;
-				margin-left: 0;
+				margin-left: -2rem;
 				margin-right: 0;
 				&__title {
 					grid-row: 1;
 					text-align: center;
 					grid-column: 1;
+					margin-left: 0rem;
 				}
 
 				&__image {
@@ -169,15 +206,19 @@
 				&__heading {
 					grid-row: 4;
 					grid-column: 1;
-
 					text-align: center;
+					&--primary{
+						font-size: 2rem;
+
+					}
 				}
 				&__description {
 					grid-row: 5;
 					grid-column: 1;
 					max-width: 30rem;
 
-					margin-right: 0;
+					margin-right: 1rem;
+					margin-left: 1rem;
 				}
 			}
 		}
