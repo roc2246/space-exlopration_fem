@@ -32,7 +32,7 @@
 		justify-content: center;
 		flex-wrap: wrap;
 
-		border: solid;
+		background-color:rgba(21, 74, 219, 0.151);
 		z-index: 0;
 		width: 50%;
 		height: 5rem;
