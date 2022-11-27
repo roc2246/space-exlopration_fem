@@ -46,6 +46,9 @@
 			text-decoration: none;
 			margin-left: 1rem;
 			margin-right: 1rem;
+			&:hover{
+				border-bottom: solid;
+			}
 		}
 	}
 

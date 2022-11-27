@@ -63,6 +63,7 @@
 			grid-column: 1;
 			grid-row: 6;
 
+			cursor: pointer;
 			display: flex;
 			flex-direction: row;
 		}
