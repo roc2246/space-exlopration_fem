@@ -1,9 +1,22 @@
 <script>
 	let toggleSrc = 'hamburger';
+
+	const mobileToggle = (display) => {
+		const links = document.getElementsByClassName('nav__link');
+		for (let x = 0; x < links.length; x++) {
+			links[x].style.display = display;
+		}
+	};
+
+	$: toggleSrc === 'close' ? mobileToggle('flex') : mobileToggle('none');
 </script>
 
 <nav class="nav">
-	<div class="nav__mobile-toggle">
+	<div
+		class="nav__mobile-toggle"
+		on:keydown
+		on:click={() => (toggleSrc === 'hamburger' ? (toggleSrc = 'close') : (toggleSrc = 'hamburger'))}
+	>
 		<img src="./assets/shared/icon-{toggleSrc}.svg" alt="mobile-toggle" />
 	</div>
 	<a data-sveltekit-prefetch href="/" class="nav__link">
@@ -32,13 +45,14 @@
 		justify-content: center;
 		flex-wrap: wrap;
 
-		background-color:rgba(21, 74, 219, 0.151);
+		background-color: rgba(21, 74, 219, 0.151);
 		z-index: 0;
 		width: 50%;
 		height: 5rem;
 		margin-right: -2rem;
 		&__mobile-toggle {
 			display: none;
+			cursor: pointer;
 		}
 		&__link {
 			@include centerChild();
@@ -46,7 +60,7 @@
 			text-decoration: none;
 			margin-left: 1rem;
 			margin-right: 1rem;
-			&:hover{
+			&:hover {
 				border-bottom: solid;
 			}
 		}
