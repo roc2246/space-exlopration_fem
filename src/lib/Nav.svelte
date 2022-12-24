@@ -1,6 +1,5 @@
 <script>
 	let toggleSrc = 'hamburger';
-
 </script>
 
 <nav class="nav">
@@ -30,22 +29,22 @@
 	</a>
 	<!-- Mobile Links -->
 	{#if toggleSrc === 'close'}
-	<a data-sveltekit-prefetch href="/" class="nav__link nav__link--mobile">
-		<span class="nav__link--no">00&nbsp;</span>
-		<span class="nav__link--location">Home</span>
-	</a>
-	<a data-sveltekit-prefetch href="/destination" class="nav__link nav__link--mobile">
-		<span class="nav__link--no">01&nbsp;</span>
-		<span class="nav__link--location">Destination</span>
-	</a>
-	<a data-sveltekit-prefetch href="/crew" class="nav__link nav__link--mobile">
-		<span class="nav__link--no">02&nbsp;</span>
-		<span class="nav__link--location">Crew</span>
-	</a>
-	<a data-sveltekit-prefetch href="/technology" class="nav__link nav__link--mobile">
-		<span class="nav__link--no">03&nbsp;</span>
-		<span class="nav__link--location">Technology</span>
-	</a>
+		<a data-sveltekit-prefetch href="/" class="nav__link nav__link--mobile">
+			<span class="nav__link--no">00&nbsp;</span>
+			<span class="nav__link--location">Home</span>
+		</a>
+		<a data-sveltekit-prefetch href="/destination" class="nav__link nav__link--mobile">
+			<span class="nav__link--no">01&nbsp;</span>
+			<span class="nav__link--location">Destination</span>
+		</a>
+		<a data-sveltekit-prefetch href="/crew" class="nav__link nav__link--mobile">
+			<span class="nav__link--no">02&nbsp;</span>
+			<span class="nav__link--location">Crew</span>
+		</a>
+		<a data-sveltekit-prefetch href="/technology" class="nav__link nav__link--mobile">
+			<span class="nav__link--no">03&nbsp;</span>
+			<span class="nav__link--location">Technology</span>
+		</a>
 	{/if}
 </nav>
 
@@ -75,8 +74,6 @@
 			&:hover {
 				border-bottom: solid;
 			}
-
-			
 		}
 	}
 
@@ -100,12 +97,11 @@
 				display: inline-block;
 			}
 			&__link {
-				&--desktop{
+				&--desktop {
 					display: none;
 				}
-				
-			// position: absolute;
 
+				// position: absolute;
 			}
 		}
 	}

@@ -82,6 +82,11 @@
 				height: auto;
 
 				@include centerChild();
+
+				&:hover{
+					background-color: white;
+					color: black;
+				}
 			}
 		}
 		&__heading,
