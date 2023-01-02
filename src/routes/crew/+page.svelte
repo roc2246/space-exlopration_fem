@@ -38,6 +38,10 @@
 	@import '../../styles/global.scss';
 	@include backgroundImage('crew', 'desktop');
 
+	#crew-container{
+		padding-bottom: 0rem;
+	}
+
 	.crew {
 		display: grid;
 		grid-template-columns: repeat(2, auto);
@@ -72,7 +76,10 @@
 			grid-row-end: 8;
 			grid-column: 2;
 
-			padding: 2rem;
+			padding-top: 2rem;
+			padding-left: 2rem;
+			padding-right: 2rem;
+			padding-bottom: 0rem;
 			&--image {
 				max-width: 100%;
 			}
