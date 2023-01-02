@@ -88,6 +88,12 @@
 			& > * {
 				cursor: pointer;
 			}
+			&--no{
+				&:hover {
+				border-bottom: solid;
+			}
+			}
+			
 		}
 		&__heading {
 			grid-column: 2;
