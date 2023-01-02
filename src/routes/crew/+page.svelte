@@ -70,6 +70,20 @@
 			cursor: pointer;
 			display: flex;
 			flex-direction: row;
+
+			& > h1 {
+				font-size: 9rem;
+				margin-top: 0;
+				margin-bottom: 0;
+				margin-right: 2rem;
+				color: grey;
+				&:hover{
+					color: white;
+				}
+				&:target{
+					display: none;
+				}
+			}
 		}
 		&__image {
 			grid-row-start: 1;
