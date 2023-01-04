@@ -4,6 +4,26 @@
 	export let data;
 	const destination = data.destination;
 	let no = 0;
+
+	const selected = (z) => {
+		const selections = document.getElementsByClassName('destination__select--no');
+		for (let i = 0; i < selections.length; i++) {
+			if (selections[i] !== selections[z]) {
+				selections[i].style.borderBottom = 'none';
+				selections[i].onmouseout = () => {
+					selections[i].style.borderBottom = 'none';
+				};
+				selections[i].onmouseover = () => {
+					selections[i].style.borderBottom = 'solid';
+				};
+			} else {
+				selections[i].onmouseout = '';
+				selections[i].onmouseover = '';
+			}
+		}
+		selections[z].style.borderBottom = 'solid';
+		no = z;
+	};
 </script>
 
 <section class="page-container" id="destination-container">
@@ -24,7 +44,7 @@
 
 		<section class="destination__select">
 			{#each destination as place, i}
-				<h1 on:keydown on:click={() => (no = i)} class="destination__select--no">
+				<h1 on:keydown on:click={() => selected(i)} class="destination__select--no">
 					{place.name}
 				</h1>
 			{/each}
@@ -88,12 +108,11 @@
 			& > * {
 				cursor: pointer;
 			}
-			&--no{
+			&--no {
 				&:hover {
-				border-bottom: solid;
+					border-bottom: solid;
+				}
 			}
-			}
-			
 		}
 		&__heading {
 			grid-column: 2;
