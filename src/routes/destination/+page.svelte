@@ -109,6 +109,10 @@
 				cursor: pointer;
 			}
 			&--no {
+				&:nth-child(1){
+					border-bottom: solid;
+
+				}
 				&:hover {
 					border-bottom: solid;
 				}
