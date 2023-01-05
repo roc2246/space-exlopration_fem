@@ -9,7 +9,7 @@
 		if(location==="/") {
 			selections[0].style.borderBottom = "solid"
 		}
-		if(location==="/destionation") {
+		if(location==="/destination") {
 			selections[1].style.borderBottom = "solid"
 		}
 		if(location==="/crew") {
