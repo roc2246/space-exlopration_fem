@@ -1,5 +1,25 @@
 <script>
+	import { onMount } from 'svelte';
+
 	let toggleSrc = 'hamburger';
+
+	onMount(() => {
+		const location = window.location.pathname;
+		const selections = document.getElementsByClassName('nav__link');
+		if(location==="/") {
+			selections[0].style.borderBottom = "solid"
+		}
+		if(location==="/destionation") {
+			selections[1].style.borderBottom = "solid"
+		}
+		if(location==="/crew") {
+			selections[2].style.borderBottom = "solid"
+		}
+		if(location==="/technology") {
+			selections[3].style.borderBottom = "solid"
+		}
+	});
+
 </script>
 
 <nav class="nav">
