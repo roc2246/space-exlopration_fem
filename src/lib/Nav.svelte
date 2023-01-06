@@ -26,7 +26,6 @@
 
 	const mobileToggle = () => {
 		const mobileNav = document.getElementsByClassName('mobile-nav')[0];
-		console.log(mobileNav.style.display)
 		toggleSrc === 'hamburger' ? (toggleSrc = 'close') : (toggleSrc = 'hamburger');
 		if(mobileNav.style.display === '' || mobileNav.style.display === 'none') {
 			mobileNav.style.display = 'block'
