@@ -27,10 +27,10 @@
 	const mobileToggle = () => {
 		const mobileNav = document.getElementsByClassName('mobile-nav')[0];
 		toggleSrc === 'hamburger' ? (toggleSrc = 'close') : (toggleSrc = 'hamburger');
-		if(mobileNav.style.display === '' || mobileNav.style.display === 'none') {
-			mobileNav.style.display = 'block'
-		} else if (mobileNav.style.display === 'block'){
-			mobileNav.style.display = 'none'
+		if (mobileNav.style.display === '' || mobileNav.style.display === 'none') {
+			mobileNav.style.display = 'flex';
+		} else if (mobileNav.style.display === 'flex') {
+			mobileNav.style.display = 'none';
 		}
 	};
 </script>
@@ -80,7 +80,20 @@
 <style lang="scss">
 	@import '../styles/global.scss';
 	.mobile-nav {
+		border-radius: 2rem;
 		display: none;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		background-color: rgb(13, 13, 39);
+		position: absolute;
+		
+		top: 10vh;
+		left: 12vw;
+
+		height: 20rem;
+		width: 80%;
 	}
 	.nav {
 		display: flex;
@@ -116,17 +129,12 @@
 	}
 
 	@media (max-width: $mobile) {
-		// .mobile-nav {
-		// 	display: block;
-		// }
 		.nav {
 			@include centerChild();
 			width: auto;
 			margin-right: 0;
 			border: none;
 			background-color: inherit;
-
-			flex-direction: column;
 			height: auto;
 			&__mobile-toggle {
 				display: inline-block;
@@ -135,8 +143,9 @@
 				&--desktop {
 					display: none;
 				}
-
-				// position: absolute;
+				&--mobile{
+					margin-bottom: 2rem;
+				}
 			}
 		}
 	}
