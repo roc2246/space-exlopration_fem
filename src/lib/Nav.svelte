@@ -6,28 +6,38 @@
 	onMount(() => {
 		const location = window.location.pathname;
 		const selections = document.getElementsByClassName('nav__link');
-		if(location==="/") {
-			selections[0].style.borderBottom = "solid"
+		if (location === '/') {
+			selections[0].style.borderBottom = 'solid';
+			selections[4].style.borderBottom = 'solid';
 		}
-		if(location==="/destination") {
-			selections[1].style.borderBottom = "solid"
+		if (location === '/destination') {
+			selections[1].style.borderBottom = 'solid';
+			selections[5].style.borderBottom = 'solid';
 		}
-		if(location==="/crew") {
-			selections[2].style.borderBottom = "solid"
+		if (location === '/crew') {
+			selections[2].style.borderBottom = 'solid';
+			selections[6].style.borderBottom = 'solid';
 		}
-		if(location==="/technology") {
-			selections[3].style.borderBottom = "solid"
+		if (location === '/technology') {
+			selections[3].style.borderBottom = 'solid';
+			selections[7].style.borderBottom = 'solid';
 		}
 	});
 
+	const mobileToggle = () => {
+		const mobileNav = document.getElementsByClassName('mobile-nav')[0];
+		console.log(mobileNav.style.display)
+		toggleSrc === 'hamburger' ? (toggleSrc = 'close') : (toggleSrc = 'hamburger');
+		if(mobileNav.style.display === '' || mobileNav.style.display === 'none') {
+			mobileNav.style.display = 'block'
+		} else if (mobileNav.style.display === 'block'){
+			mobileNav.style.display = 'none'
+		}
+	};
 </script>
 
 <nav class="nav">
-	<div
-		class="nav__mobile-toggle"
-		on:keydown
-		on:click={() => (toggleSrc === 'hamburger' ? (toggleSrc = 'close') : (toggleSrc = 'hamburger'))}
-	>
+	<div class="nav__mobile-toggle" on:keydown on:click={() => mobileToggle()}>
 		<img src="./assets/shared/icon-{toggleSrc}.svg" alt="mobile-toggle" />
 	</div>
 	<!-- Desktop Links -->
@@ -48,7 +58,7 @@
 		<span class="nav__link--location">Technology</span>
 	</a>
 	<!-- Mobile Links -->
-	{#if toggleSrc === 'close'}
+	<div class="mobile-nav">
 		<a data-sveltekit-prefetch href="/" class="nav__link nav__link--mobile">
 			<span class="nav__link--no">00&nbsp;</span>
 			<span class="nav__link--location">Home</span>
@@ -65,11 +75,14 @@
 			<span class="nav__link--no">03&nbsp;</span>
 			<span class="nav__link--location">Technology</span>
 		</a>
-	{/if}
+	</div>
 </nav>
 
 <style lang="scss">
 	@import '../styles/global.scss';
+	.mobile-nav {
+		display: none;
+	}
 	.nav {
 		display: flex;
 		flex-direction: row;
@@ -104,6 +117,9 @@
 	}
 
 	@media (max-width: $mobile) {
+		// .mobile-nav {
+		// 	display: block;
+		// }
 		.nav {
 			@include centerChild();
 			width: auto;
