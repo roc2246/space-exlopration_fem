@@ -112,15 +112,14 @@
 			&--container {
 				cursor: pointer;
 				border: solid;
+				border-color: rgba(255, 255, 255, 0.5);
 				border-radius: 50%;
 				width: 3.5rem;
 				height: auto;
 
 				@include centerChild();
 				&:nth-child(1) {
-					// background-color: white;
 					color: black;
-					border-color: white;
 				}
 				&:hover {
 					background-color: white;
