@@ -1,9 +1,44 @@
 <script>
+	import { onMount } from 'svelte';
 	import TopRow from '../../lib/TopRow.svelte';
 
 	export let data;
 	const technology = data.technology;
 	let no = 0;
+
+	onMount(() => {
+		const selections = document.getElementsByClassName('technology__select--container');
+		
+		if(selections[0].style.backgroundColor === ""){
+			selections[0].style.backgroundColor = "white"
+		}
+	});
+
+	const selected = (z) => {
+		const selections = document.getElementsByClassName('technology__select--container');
+		const selectionsNo = document.querySelectorAll('.technology__select--container > h1');
+		for (let i = 0; i < selections.length; i++) {
+			if (selections[i] !== selections[z]) {
+				selections[i].style.backgroundColor = "";
+				selectionsNo[i].style.color = 'white';
+
+				selections[i].onmouseout = () => {
+					selections[i].style.backgroundColor = "";
+					selectionsNo[i].style.color = 'white';
+				};
+				selections[i].onmouseover = () => {
+					selections[i].style.backgroundColor = 'white';
+					selectionsNo[i].style.color = 'black';
+				};
+			} else {
+				selections[i].onmouseout = "";
+				selections[i].onmouseover = "";
+			}
+		}
+		selections[z].style.backgroundColor = 'white';
+		selectionsNo[z].style.color = 'black';
+		no = z;
+	};
 </script>
 
 <section class="page-container" id="technology-container">
@@ -15,7 +50,7 @@
 		</h2>
 		<section class="technology__select">
 			{#each technology as item, i}
-				<div on:keydown on:click={() => (no = i)} class="technology__select--container">
+				<div on:keydown on:click={() => selected(i)} class="technology__select--container">
 					<h1>
 						{i + 1}
 					</h1>
@@ -82,10 +117,15 @@
 				height: auto;
 
 				@include centerChild();
-
-				&:hover{
+				&:nth-child(1) {
+					// background-color: white;
+					color: black;
+					border-color: white;
+				}
+				&:hover {
 					background-color: white;
 					color: black;
+					border-color: white;
 				}
 			}
 		}
@@ -176,11 +216,10 @@
 			@include backgroundImage('technology', 'mobile');
 
 			#technology-container {
-			padding-right: 2rem;
-			width: auto;
-			height: 100vh;
-		}
-
+				padding-right: 2rem;
+				width: auto;
+				height: 100vh;
+			}
 
 			.technology {
 				grid-template-columns: auto;
@@ -212,9 +251,8 @@
 					grid-row: 4;
 					grid-column: 1;
 					text-align: center;
-					&--primary{
+					&--primary {
 						font-size: 2rem;
-
 					}
 				}
 				&__description {

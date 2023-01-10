@@ -4,6 +4,26 @@
 	export let data;
 	const crew = data.crew;
 	let no = 0;
+
+	const selected = (z) => {
+		const selections = document.getElementsByClassName('crew__select--no');
+		for (let i = 0; i < selections.length; i++) {
+			if (selections[i] !== selections[z]) {
+				selections[i].style.color = 'grey';
+				selections[i].onmouseout = () => {
+					selections[i].style.color = 'grey';
+				};
+				selections[i].onmouseover = () => {
+					selections[i].style.color = 'white';
+				};
+			} else {
+				selections[i].onmouseout = '';
+				selections[i].onmouseover = '';
+			}
+		}
+		selections[z].style.color = 'white';
+		no = z;
+	};
 </script>
 
 <section class="page-container" id="crew-container">
@@ -24,7 +44,7 @@
 
 		<section class="crew__select">
 			{#each crew as item, i}
-				<h1 on:keydown on:click={() => (no = i)} class="crew__select--no">.</h1>
+				<h1 on:keydown on:click={() => selected(i)} class="crew__select--no">.</h1>
 			{/each}
 		</section>
 
@@ -71,18 +91,19 @@
 			display: flex;
 			flex-direction: row;
 
-			& > h1 {
+			&--no {
 				font-size: 9rem;
 				margin-top: 0;
 				margin-bottom: 0;
 				margin-right: 2rem;
 				color: grey;
+				&:nth-child(1){
+					color: white;
+				}
 				&:hover{
 					color: white;
 				}
-				&:target{
-					display: none;
-				}
+				
 			}
 		}
 		&__image {
