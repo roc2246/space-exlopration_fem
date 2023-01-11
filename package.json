@@ -1,6 +1,9 @@
 {
 	"name": "space",
-	"version": "0.0.1",
+	"version": "1.0.0",
+	"engines": {
+	  "node": "18.x"
+	},
 	"private": true,
 	"scripts": {
 		"start": "node build/index.js",
